@@ -1,0 +1,22 @@
+{
+  "name": "folder_creation_software",
+  "projectName": "folder_creation_software",
+  "version": "1.0.0",
+  "description": "A folder creation software",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-builder --mac",
+    "build-win": "electron-builder --win",
+    "build-linux": "electron-builder --linux"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.1.1",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

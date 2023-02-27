@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILE CREATION TOOL</title>
+
+    <style>
+
+        html {
+            font-family: sans-serif;
+        }
+        
+        .container {
+            width:80%;
+            margin: auto;
+        }
+
+        .row {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #000;
+            padding-bottom:20px;
+            padding-top:20px;
+        }
+
+        .folderName input {
+            border: #000 solid 2px;
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .selects {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .col-1 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+        .button {
+
+            color: #fff;
+            background-color: #000;
+            border: 0;
+            padding: 20px 30px;
+            display: block;
+            margin: auto;
+        }
+
+
+        #navbar {
+        background-color: #eee;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5px;
+      }
+
+    .drag {
+        -webkit-app-region: drag;
+        width: 100%;
+    }
+
+    .languages {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .languages button {
+
+        background-color: #fff;
+        border: 2px solid #000;
+
+    }
+      
+
+
+    </style>
+
+</head>
+<body>
+
+    <div id="navbar">
+        <div class="drag"><h3>Folder Creation Tool v1</h3></div>
+        <button onclick="window.close()">&#x2716;</button>
+      </div>
+
+
+
+    <div class="container">
+
+        <div class="row folderName" >
+                <label for="fileName">Folder Name</label>
+                <input type="text" class="fileName-input" id="folderName" placeholder="Folder Name">
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <label for="file">LANGUAGE</label>
+                <div id="languages" class="languages"></div>
+            </div>
+        </div>
+
+        <div class="row selects">
+            <div class="col-1">
+                <label for="foldertype">Asset Type</label>
+                <select name="assetType" id="foldertype">
+                    <option value="VIDEO">VIDEO</option>
+                    <option value="VIDEO LOCALISATION">VIDEO LOCALISATION</option>
+                    <option value="STATIC">STATIC</option>
+                    <option value="STATIC LOCALISATION">STATIC LOCALISATION</option>
+                </select>
+            </div>
+            <div class="col-1">
+                <button class="button" id="show-dialog-button">SELECT PATH AND CREATE FOLDER !</button>
+            </div>
+          
+        </div>
+
+        <!-- <div class="row">
+            <div class="col">
+                <button class="button" id="show-dialog-button">SELECT PATH AND CREATE FOLDER !</button>
+            </div>
+   
+        </div>
+ -->
+
+
+    </div>
+
+    
+  
+
+
+    <script src="./renderer.js"></script>
+   
+</body>
+</html>
+
+
+
