@@ -2,7 +2,6 @@ const { ipcRenderer, dialog } = require('electron');
 
 let folder = {
     name: "",
-    basePath: "",
     languages: new Set([]),
     type: "VIDEO",
 }
@@ -60,10 +59,7 @@ renderButtons()
 
 
 
-file.addEventListener("input", (e)=>{
-    console.log(e.target.files[0]);
-    folder.basePath = e.target.files[0].path
-})
+
 
 folderName.addEventListener("input", (e)=>{
     folder.name = folderName.value
