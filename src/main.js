@@ -53,6 +53,8 @@ ipcMain.on('create-folder', async (event, folder) => {
   try {
     if (path.canceled) return dialog.showErrorBox("Error", "Operation Canceled")
 
+    console.log("Core Path", path.filePaths[0]);
+
     let masterFolderName = `${path.filePaths[0]}/${folder.name}`
     fs.mkdirSync(masterFolderName)
 
