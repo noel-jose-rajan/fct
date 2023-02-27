@@ -16,7 +16,7 @@ function createMainWindow() {
   mainWindow = new BrowserWindow({
     width: 950,
     height: 450,
-    // icon: `${__dirname}/assets/icons/Icon_256x256.png`,
+    icon: `${__dirname}/assets/logo.png`,
     resizable: false,
     frame: false,
     webPreferences: {
@@ -40,7 +40,7 @@ app.on('ready', () => {
   createMainWindow();
 
   // Remove variable from memory
-  mainWindow.on('closed', () => (mainWindow = null));
+  mainWindow.on('closed', () => (mainWindow = null)); 
 });
 
 
